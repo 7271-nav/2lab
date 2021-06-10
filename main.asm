@@ -4,10 +4,15 @@ section '.text' executable
 entry start
 start:
         mov eax, 0
-        mov ebx, 0  ; for summarizing elems > M
+        
+        mov ebx, 0
+        
         mov ecx, 10
-        mov edx, 0  ; for counting elems < M
+        
+        mov edx, 0
+        
         mov esi, arr
+        
         lp:
         lodsw
         cmp ax, 6
@@ -23,8 +28,6 @@ start:
         eend:
         loop lp
 
-; ebx == 34
-; edx == 5
 ret
 
 
